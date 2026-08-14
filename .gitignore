@@ -1,0 +1,14 @@
+node_modules/
+.env
+__pycache__/
+*.pyc
+.DS_Store
+dist/
+build/
+
+# Python virtualenv
+.venv/
+venv/
+
+# Local SQLite database
+*.db

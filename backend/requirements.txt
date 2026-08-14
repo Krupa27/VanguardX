@@ -1,0 +1,38 @@
+# Core Framework
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+websockets>=12.0
+python-multipart>=0.0.6
+
+# LangChain and AI
+langchain-openai>=0.1.0
+openai>=1.30.0
+
+# Browser Automation
+# After installing, you MUST also download the browser binaries:
+#   playwright install chromium
+playwright>=1.40.0
+
+# Database
+sqlalchemy>=2.0.23
+
+# Configuration
+python-dotenv>=1.0.0
+pydantic>=2.5.0
+
+# -----------------------------------------------------------------------------
+# Removed: not imported anywhere in backend/ as of 2026-08-15. They added
+# ~500MB and were the main cause of fresh-machine install failures
+# (psycopg2-binary needs libpq headers; opencv-python is a large wheel).
+# Re-add individually if you start using them.
+#
+#   langchain            superseded by langchain-openai for this codebase
+#   tiktoken             token counting — unused
+#   numpy, pandas        unused
+#   scikit-learn         unused (planned anomaly detection)
+#   opencv-python        unused (planned visual diffing)
+#   Pillow               unused — screenshots stay as raw bytes
+#   psycopg2-binary      unused — DATABASE_URL is sqlite
+#   redis, celery        unused — no task queue; asyncio.create_task instead
+#   httpx, aiofiles      unused directly (httpx ships as an openai dependency)
+# -----------------------------------------------------------------------------
