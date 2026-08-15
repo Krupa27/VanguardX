@@ -76,8 +76,11 @@ A Chromium window opens by default so you can watch it. Set `HEADLESS=true` in
 
 ## LLM configuration
 
-The LLM is optional. With no key, exploration still runs and still reports every
-finding — it just picks elements randomly rather than with model guidance.
+I used NVIDIA - nemotron-3-ultra model
+
+BASE_URL = https://openrouter.ai/api/v1
+MODEL = nvidia/nemotron-3-ultra-550b-a55b:free
+
 
 Set these in `backend/.env`:
 
@@ -86,9 +89,6 @@ OPENAI_BASE_URL=https://openrouter.ai/api/v1
 OPENAI_API_KEY=sk-or-v1-...
 OPENAI_MODEL=openai/gpt-4o-mini
 ```
-
-Any OpenAI-compatible endpoint works — leave `OPENAI_BASE_URL` unset for
-`api.openai.com`, or point it at `http://localhost:11434/v1` for Ollama.
 
 **OpenRouter model ids must be namespaced** (`vendor/model`). A bare
 `gpt-4o-mini` returns 404 there. Confirm an id is live before relying on it:
