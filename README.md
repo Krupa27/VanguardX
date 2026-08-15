@@ -13,7 +13,7 @@ broken images) over WebSocket to a React dashboard.
 | Python | 3.11+ | Verified on 3.14 |
 | Node.js | 18+ | Verified on 25.9 / npm 11.9 |
 
-An LLM API key is **optional** — see [LLM configuration](#llm-configuration).
+I have used NVIDIA - nemotron-3-ultra MODEL — see [LLM configuration](#llm-configuration).
 
 ---
 
